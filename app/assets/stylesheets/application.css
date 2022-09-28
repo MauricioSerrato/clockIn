@@ -144,3 +144,7 @@
  .alert{
     /* display: none; */
  }
+
+ .btn-primary{
+    margin-left: 1em;
+ }
