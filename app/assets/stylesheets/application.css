@@ -151,6 +151,7 @@
     margin-left: 1em;
  }
  #carouselExampleIndicators{
+   position: relative;
    height: 100vh;
    width: 100vw;
  }
@@ -235,5 +236,4 @@
 .brandpic{
    width:80px;
    height: 80px;
-   margin: 0px;
 }

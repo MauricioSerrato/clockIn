@@ -3,16 +3,8 @@
   <div class ='homecontainer'>
     <% @posts.each do |post| %>
    
-    <% if user_signed_in?%>
-      <% if current_user.id == post.user_id %>
-        <%= render post %>
-      <% elsif current_user.id == 5 %>
-        <%= render post %>
-      <%else%>
-      <%end%>  
-      <%else%>
-       <%= render 'posts/slide'%>
-    <%end%>  
+        <%= render 'posts/slide'%>
+
       <%# link_to "Show this post", post %>
     <% end %>
   </div> 
