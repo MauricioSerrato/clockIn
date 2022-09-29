@@ -6,8 +6,7 @@
   <thead>
     <tr>
     
-      <th scope="col">First name</th>
-      <th scope="col">Last Name</th>
+      <th scope="col">Name</th>
       <th scope="col">Phone</th>
       <th scope="col">Location</th>
       <th scope="col">Date</th>
@@ -18,8 +17,12 @@
   </thead>
   <tbody>
     <tr class='tablerow'>
-      <td id='first'><%= post.first_name%></td>
-      <td id='last'><%= post.last_name %></td>
+      <td id='first'>
+      <%= post.first_name%>
+      <%= post.last_name %>
+      
+      </td>
+     
       <td id='phone'><%= post.phone %></td>
       <td id='location'><%= post.location %></td>
       <td id='date'><%= post.date %></td>
