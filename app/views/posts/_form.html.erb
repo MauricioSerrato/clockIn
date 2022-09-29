@@ -36,6 +36,10 @@
     <%= form.date_field :date %>
   </div>
 
+  <div >
+    <%= form.number_field :user_id, id: :post_user_id, value: current_user.id, type: :hidden%>
+ </div>
+
  <button class ='create'<%=form.submit%> Submit </button>
 
 <% end %>
