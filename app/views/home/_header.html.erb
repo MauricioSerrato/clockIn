@@ -1,4 +1,5 @@
 
+
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
     <%= link_to 'Dial-In', root_path, class:'navbar-brand' %>
@@ -8,13 +9,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <%= link_to 'About', home_about_path, class: 'nav-link'%>
-        <%= link_to 'Post', new_post_path, class: 'nav-link' %>
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
-        <%= link_to 'Sign in',  new_user_session_path, class: 'nav-link' %> 
+
+      <% if user_signed_in? %>
+          <%= link_to 'About', home_about_path, class: 'nav-link'%>
+          <%= link_to 'Post', new_post_path, class: 'nav-link' %>
+          <%= link_to 'Edit Profile',  edit_user_registration_path, class: 'nav-link' %> 
+
+        <%else%>
+          <%= link_to 'About', home_about_path, class: 'nav-link'%>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
+          <%= link_to 'Sign in',  new_user_session_path, class: 'nav-link' %> 
+      <%end%>    
          <%# <button_to 'Sign Out',   destroy_user_session_path, method: :delete,  class: 'nav-link' > 
          originally had sign out as a link however for some reason it cannot be a link to something other than a get rout therfore i made it into a button and i worked !!!!!!!!  %>
-        <%= link_to 'Edit Profile',  edit_user_registration_path, class: 'nav-link' %> 
+        
+        
           
         
         
@@ -26,8 +35,9 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-         <%= button_to 'Sign Out',   destroy_user_session_path, method: :delete,  class: 'btn btn-primary' %> 
+         
       </form>
+      <%= button_to 'Sign Out',   destroy_user_session_path, method: :delete,  class: 'btn btn-primary' %> 
     </div>
   </div>
 </nav>

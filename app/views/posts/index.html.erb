@@ -1,10 +1,13 @@
 
 
-  <div class='homecontainer'>
+  <div >
     <% @posts.each do |post| %>
-  
-  
-      <%= render post %>
+   
+    <% if user_signed_in?%>
+        <%= render post %>
+      <%else%>
+       <%= render 'posts/slide'%>
+    <%end%>  
       <%# link_to "Show this post", post %>
     <% end %>
   </div> 
