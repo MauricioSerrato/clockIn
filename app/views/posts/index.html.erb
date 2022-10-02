@@ -2,21 +2,21 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script> 
 
 
-
+  <% if user_signed_in? %>
   <div class ='homecontainer'>
-    <% @posts.each do |post| %>
-      <% if user_signed_in? %> 
+    <% @posts.each do |post| %> 
           <% if current_user.id == 5%>
             <%= render post %>
           <%elsif post.user == current_user%>  
             <%= render post %>      
           <%end%>
-    
-        <%else%>
-        <%= render 'posts/slide'%>
-      <%end%>  
+        <% end %>  
+      </div> 
+   <%else%>
+      <%= render 'posts/slide'%>
+      
+    <%end%>  
       <%# link_to "Show this post", post %>
-    <% end %>
-  </div> 
+ 
 
 

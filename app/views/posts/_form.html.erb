@@ -40,10 +40,10 @@
     <%= form.number_field :user_id, id: :post_user_id, value: current_user.id, type: :hidden%>
  </div>
  <div >
-    <%= form.number_field :latitude%>
+    <%= form.number_field :latitude, type: :hidden%>
  </div>
  <div >
-    <%= form.number_field :longitude%>
+    <%= form.number_field :longitude, type: :hidden%>
  </div>
 
  <button class ='create'<%=form.submit%> Submit </button>
