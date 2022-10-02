@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 
 
+gem 'coffee-rails'
+gem 'gmaps4rails'
 gem "rails", "~> 7.0.4"
 gem "sprockets-rails"
 gem "puma", "~> 5.0"
@@ -15,8 +17,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'jquery-rails'
-
-
+gem 'geocoder', '~> 1.8', '>= 1.8.1'
 
 
 group :development, :test do

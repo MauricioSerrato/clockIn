@@ -237,3 +237,10 @@
    width:80px;
    height: 80px;
 }
+
+#map1 img { 
+   max-width: none;
+ }
+ #map label { 
+   width: auto; display:inline; 
+ } 
