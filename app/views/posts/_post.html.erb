@@ -13,6 +13,8 @@
       <th scope="col">Worker Id</th>
       <th scope="col">Info</th>
       <th scope="col">Generated</th>
+      <th scope="col">Generated</th>
+
 
 
 
@@ -31,6 +33,11 @@
       <td id='date'><%= post.user_id %></td>
       <td id='info'><%= link_to 'Info', post %></td>
       <td id='date'><%= post.created_at %></td>
+      <td id='date'>
+      <%= post.latitude %>
+      <%= post.longitude %>
+      </td>
+
 
 
 
