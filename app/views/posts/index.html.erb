@@ -7,6 +7,8 @@
     <% @posts.each do |post| %> 
           <% if current_user.id == 5%>
             <%= render post %>
+          <% elsif current_user.id == 1%>
+            <%= render post %>
           <%elsif post.user == current_user%>  
             <%= render post %>      
           <%end%>
