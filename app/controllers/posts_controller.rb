@@ -4,12 +4,6 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
-
-    @hash = Gmaps4rails.build_markers(@reports) do |report, marker|
-      marker.lat report.latitude
-      marker.lng report.longitude
-      marker.infowindow report.description
-    end
   end
 
   # GET /posts/1 or /posts/1.json
