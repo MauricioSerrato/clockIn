@@ -7,9 +7,6 @@ class Post < ApplicationRecord
     def location
         [latitude, longitude].compact.join(', ')
     end
-    def google_map(center)
-        "https://maps.googleapis.com/maps/api/staticmap?center=#{center}&size=500x500&zoom=17&key=[AIzaSyD1bETiH4aPUhS40O7RGCNr3ik7sHXrQzI]"
-    end  
 
 end
 
